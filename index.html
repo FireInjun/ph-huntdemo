@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Providing HTML5 audio with a base64 encoded Data URI as source</title>
+    <meta charset="utf-8" />
+    <script>
+        var API = "(link: https://sofriendlyproducthuntyac.appspot.com) sofriendlyproducthuntyac.appspot.com"
+        function GetHunt() {
+            var topHunt = document.createElement("AUDIO");
+            topHunt.setAttribute("id", "topHunt")
+            topHunt.setAttribute("autoplay", true)
+            var request = new XMLHttpRequest();
+            (link: http://request.open) request.open("GET", API)
+            request.onreadystatechange = function () {
+                if (4 == request.readyState) {
+                    topHunt.setAttribute("src", request.responseText)
+                }
+            }
+            request.send()
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Product Hunt Test!</h1>
+    <p>
+    <button onclick="GetHunt()">topHunt</button>
+    </p>
+</body>
+
+</html>
